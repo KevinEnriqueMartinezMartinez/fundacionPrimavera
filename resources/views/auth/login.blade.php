@@ -1,12 +1,59 @@
 @extends('layouts.login')
 @section('content')
 
-<div class="login-logo">
-    <a href="{{url('/')}}">
-        <img src="https://cdn-icons-png.flaticon.com/512/7112/7112294.png" alt="" style="width: 90px">
-        <b>Inventario</b>UDB
-    </a>
-  </div>
+<style>
+    body {
+        background-image: url("{{ asset('img/background1.jpg') }}");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
+    }
+
+     .card {
+        background: rgba(255, 255, 255, 0.15); /* Transparencia */
+        border-radius: 16px;
+        backdrop-filter: blur(10px); /* Desenfoque */
+        -webkit-backdrop-filter: blur(10px); /* Soporte para Safari */
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        padding: 2rem;
+    }
+
+    .login-card-body {
+        color: #000; /* Asegura contraste con el fondo */
+    }
+
+    .form-control {
+        background-color: rgba(255, 255, 255, 0.8);
+        border: 1px solid #ccc;
+    }
+
+    .form-control:focus {
+        box-shadow: none;
+        border-color: #007bff;
+        background-color: rgba(255, 255, 255, 1);
+    }
+
+    .btn-primary {
+        background-color: #007bff;
+        border: none;
+    }
+
+    .btn-primary:hover {
+        background-color: #0056b3;
+    }
+
+    .text-center img {
+        filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.2));
+    }
+</style>
+
+<div class="text-center mb-4">
+    <img src="{{ asset('img/logofundacionprimavera.jpg') }}" alt="Logo Fundación Primavera" class="mb-2" style="width: 100px;">
+    <h4 class="mb-0" style="color: rgb(242, 246, 247)">Fundación Primavera</h4>
+</div>
+
   <div class="card">
     <div class="card-body login-card-body">
     <form method="POST" action="{{ route('login') }}">

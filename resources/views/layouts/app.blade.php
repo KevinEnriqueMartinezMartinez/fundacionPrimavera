@@ -41,8 +41,8 @@
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="{{url('/')}}" class="brand-link">
-      <img src="https://cdn-icons-png.flaticon.com/512/7112/7112294.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-      <span class="brand-text font-weight-light">InventarioUDB</span>
+      <img src="{{ asset('img/logofundacionprimavera.jpg') }}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+      <span class="brand-text font-weight-light">Fundacion Primavera</span>
     </a>
 
     <!-- Sidebar -->
