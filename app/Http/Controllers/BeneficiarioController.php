@@ -3,14 +3,14 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Cliente;
+use App\Models\Beneficiarios;
 
-class ClienteController extends Controller
+class BeneficiarioController extends Controller
 {
     public function index()
     {
-        $clientes = Cliente::all();
-        return view('clientes.index', compact('clientes'));
+        $beneficiarios = Beneficiarios::all();
+        return view('clientes.index', compact('beneficiarios'));
     }
 
     public function create()
@@ -21,8 +21,8 @@ class ClienteController extends Controller
     public function store(Request $request)
     {
         try {
-            Cliente::create($request->all());
-            return redirect()->route('clientes.index')->with('success', 'Cliente creado correctamente');
+            Beneficiarios::create($request->all());
+            return redirect()->route('clientes.index')->with('success', 'Beneficiario creado correctamente');
         } catch (\Exception $e) {
             return redirect()->back()->with('error', 'Algo salió mal, intenta de nuevo.');
         }
@@ -30,16 +30,16 @@ class ClienteController extends Controller
 
     public function edit($id)
     {
-        $cliente = Cliente::find($id);
-        return view('clientes.edit', compact('cliente'));
+        $beneficiarios = Beneficiarios::find($id);
+        return view('clientes.edit', compact('beneficiarios'));
     }
 
     public function update(Request $request, $id)
     {
         try {
-            $cliente = Cliente::find($id);
-            $cliente->update($request->all());
-            return redirect()->route('clientes.index')->with('success', 'Cliente actualizado correctamente');
+            $beneficiarios = Beneficiarios::find($id);
+            $beneficiarios->update($request->all());
+            return redirect()->route('clientes.index')->with('success', 'Beneficiario actualizado correctamente');
         } catch (\Exception $e) {
             return redirect()->back()->with('error', 'Algo salió mal, intenta de nuevo.');
         }
@@ -48,8 +48,8 @@ class ClienteController extends Controller
     public function destroy($id)
     {
         try {
-            Cliente::destroy($id);
-            return redirect()->route('clientes.index')->with('success', 'Cliente borrado correctamente');
+            Beneficiarios::destroy($id);
+            return redirect()->route('clientes.index')->with('success', 'Beneficiario borrado correctamente');
         } catch (\Exception $e) {
             return redirect()->back()->with('error', 'Algo salió mal, intenta de nuevo.');
         }

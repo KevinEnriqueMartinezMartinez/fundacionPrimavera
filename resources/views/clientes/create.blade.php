@@ -5,7 +5,7 @@
     <div class="container-fluid">
         <div class="row mb-2">
             <div class="col-sm-6">
-                <h1>Crear Usuario</h1>
+                <h1>Crear Beneficiario</h1>
             </div>
             <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
@@ -56,7 +56,7 @@
                         <div class="row">
                             <div class="col-md-3">
                                 <a href="{{ route('clientes.index') }}" class="btn btn-dark">Volver</a>
-                                <button type="submit" class="btn btn-primary">Guardar Cliente</button>
+                                <button type="submit" class="btn btn-primary">Guardar Beneficiario</button>
                             </div>
                         </div>
                     </form>

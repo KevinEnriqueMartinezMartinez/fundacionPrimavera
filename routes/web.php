@@ -7,7 +7,7 @@ use App\Http\Controllers\TipoArticuloController;
 use App\Http\Controllers\MarcaController;
 use App\Http\Controllers\ProveedorController;
 use App\Http\Controllers\ArticuloController;
-use App\Http\Controllers\ClienteController;
+use App\Http\Controllers\BeneficiarioController;
 use App\Http\Controllers\TransaccionSalidaController;
 use App\Http\Controllers\ReporteController;
 
@@ -31,7 +31,7 @@ Route::group(['middleware' => ['auth'] ], function(){
     Route::resource('marcas', MarcaController::class);
     Route::resource('proveedores', ProveedorController::class);
     Route::resource('articulos', ArticuloController::class);
-    Route::resource('clientes', ClienteController::class);
+    Route::resource('clientes', BeneficiarioController::class);
     Route::resource('transacciones_salida', TransaccionSalidaController::class);
     // Ruta reportes
     Route::get('reporte_mas_vendidos', [ReporteController::class, 'reporte_mas_vendido']);

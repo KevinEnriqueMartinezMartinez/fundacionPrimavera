@@ -45,7 +45,7 @@
                     <table id="transacciones_salida" class="table">
                         <thead>
                             <tr>
-                                <th>Cliente</th>
+                                <th>Beneficiarios</th>
                                 <th>Producto</th>
                                 <th>Cantidad</th>
                                 <th>Fecha</th>
@@ -54,7 +54,7 @@
                         <tbody>
                             @foreach ($transacciones as $transaccion)
                                 <tr>
-                                    <td>{{ $transaccion->cliente->nombre }}</td>
+                                    <td>{{ @$transaccion->beneficiario->nombre }}</td>
                                     <td>{{ @$transaccion->articulo->descripcion }}</td>
                                     <td>{{ $transaccion->cantidad }}</td>
                                     <td>{{ $transaccion->fecha }}</td>

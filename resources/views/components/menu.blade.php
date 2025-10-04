@@ -52,7 +52,7 @@
 <li class="nav-item">
     <a href="{{url('clientes')}}" class="nav-link">
         <i class="nav-icon fa fa-users"></i>
-        <p>Clientes</p>
+        <p>Beneficiario</p>
     </a>
 </li>
 

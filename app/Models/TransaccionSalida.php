@@ -20,9 +20,9 @@ class TransaccionSalida extends Model
         'fecha',
     ];
 
-    public function cliente()
+    public function beneficiario()
     {
-        return $this->belongsTo(Cliente::class, 'cliente_id');
+        return $this->belongsTo(Beneficiarios::class, 'cliente_id');
     }
 
     public function articulo()
