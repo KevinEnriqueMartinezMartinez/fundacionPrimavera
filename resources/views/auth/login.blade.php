@@ -11,14 +11,17 @@
     }
 
      .card {
-        background: rgba(255, 255, 255, 0.15); /* Transparencia */
-        border-radius: 16px;
-        backdrop-filter: blur(10px); /* Desenfoque */
-        -webkit-backdrop-filter: blur(10px); /* Soporte para Safari */
-        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-        border: 1px solid rgba(255, 255, 255, 0.18);
-        padding: 2rem;
-    }
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 26px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    padding: 1rem;
+    width: 660px;   /* aumenta el ancho */
+    max-width: 100%; 
+    margin: 0 auto; /* centra horizontalmente */
+}
 
     .login-card-body {
         color: #000; /* Asegura contraste con el fondo */
@@ -47,6 +50,17 @@
     .text-center img {
         filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.2));
     }
+
+    .card-body {
+    border-radius: 21px;
+    min-height: 325px; /* aumenta la altura mínima */
+    min-width: 325px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* centra verticalmente el contenido */
+}
+
+    
 </style>
 
 <div class="text-center mb-4">

@@ -9,7 +9,7 @@
     <div class="container-fluid">
         <div class="row mb-2">
             <div class="col-sm-6">
-                <h1>Clientes</h1>
+                <h1>Beneficiarios</h1>
             </div>
             <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
@@ -26,7 +26,7 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header">
-                    <a href="{{ route('clientes.create') }}" class="btn btn-primary">Agregar Cliente</a>    
+                    <a href="{{ route('clientes.create') }}" class="btn btn-primary">Agregar Beneficiario</a>    
                 </div>
                 <div class="card-body">
 
@@ -42,7 +42,7 @@
                         </div>
                     @endif
 
-                    <table id="clientes" class="table">
+                    <table id="beneficiarios" class="table">
                         <thead>
                             <tr>
                                 <th>Nombre</th>
@@ -53,18 +53,18 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach($clientes as $cliente)
+                            @foreach($beneficiarios as $beneficiario)
                             <tr>
-                                <td>{{ $cliente->nombre }}</td>
-                                <td>{{ $cliente->email }}</td>
-                                <td>{{ $cliente->telefono }}</td>
-                                <td>{{ $cliente->direccion }}</td>
+                                <td>{{ $beneficiario->nombre }}</td>
+                                <td>{{ $beneficiario->email }}</td>
+                                <td>{{ $beneficiario->telefono }}</td>
+                                <td>{{ $beneficiario->direccion }}</td>
                                 <td>
-                                    <a href="{{ route('clientes.edit', $cliente->id) }}" class="btn btn-sm btn-primary">Editar</a>
-                                    <form action="{{ route('clientes.destroy', $cliente->id) }}" method="POST" style="display: inline-block;" id="deleteForm{{$cliente->id}}">
+                                    <a href="{{ route('clientes.edit', $beneficiario->id) }}" class="btn btn-sm btn-primary">Editar</a>
+                                    <form action="{{ route('clientes.destroy', $beneficiario->id) }}" method="POST" style="display: inline-block;" id="deleteForm{{$beneficiario->id}}">
                                         @csrf
                                         @method('DELETE')
-                                        <button type="button" class="btn btn-sm btn-danger" onclick="confirmDelete({{$cliente->id}})">Eliminar</button>
+                                        <button type="button" class="btn btn-sm btn-danger" onclick="confirmDelete({{$beneficiario->id}})">Eliminar</button>
                                     </form>
                                 </td>
                             </tr>
@@ -83,13 +83,13 @@
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script>   
     $(document).ready(function() {
-        $('#clientes').DataTable();
+        $('#beneficiarios').DataTable();
     });
 
     function confirmDelete(id) {
         Swal.fire({
             title: 'Advertencia',
-            text: "¿Estás seguro que desea eliminar este cliente?",
+            text: "¿Estás seguro que desea eliminar este Beneficiario?",
             icon: 'warning',
             showCancelButton: true,
             confirmButtonColor: '#d33',
