@@ -5,11 +5,7 @@
     <div class="container-fluid">
         <div class="row mb-2">
             <div class="col-sm-6">
-<<<<<<< Updated upstream
-                <h1>Crear Cliente</h1>
-=======
                 <h1>Crear Beneficiario</h1>
->>>>>>> Stashed changes
             </div>
             <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
