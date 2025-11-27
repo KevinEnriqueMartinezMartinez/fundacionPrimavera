@@ -1,77 +1,127 @@
 <li class="nav-header">Menu</li>
 
 <li class="nav-item">
-    <a href="{{url('home')}}" class="nav-link">
+    <a href="{{ url('home') }}" class="nav-link {{ Request::is('home*') ? 'active' : '' }}">
         <i class="nav-icon fas fa-tachometer-alt"></i>
         <p>Inicio</p>
     </a>
 </li>
 
 <li class="nav-item">
-    <a href="{{url('clase_articulos')}}" class="nav-link">
-        <i class="nav-icon fa fa-archive"></i>
-        <p>Clase Artículo</p>
-    </a>
-</li>
-
-<li class="nav-item">
-    <a href="{{url('unidad_medidas')}}" class="nav-link">
-        <i class="nav-icon fa fa-balance-scale"></i>
-        <p>Unidad de Medida</p>
-    </a>
-</li>
-
-<li class="nav-item">
-    <a href="{{url('tipo_articulos')}}" class="nav-link">
+    <a href="{{ url('dimensiones') }}" class="nav-link {{ Request::is('dimensiones*') ? 'active' : '' }}">
         <i class="nav-icon fa fa-cube"></i>
-        <p>Tipo de Artículos</p>
+        <p>Dimensiones</p>
     </a>
 </li>
 
 <li class="nav-item">
-    <a href="{{url('marcas')}}" class="nav-link">
-        <i class="nav-icon fa fa-tag"></i>
-        <p>Marcas</p>
+    <a href="{{ url('indicadores') }}" class="nav-link {{ Request::is('indicadores*') ? 'active' : '' }}">
+        <i class="nav-icon fa fa-chart-line"></i>
+        <p>Indicadores</p>
     </a>
 </li>
 
 <li class="nav-item">
-    <a href="{{url('proveedores')}}" class="nav-link">
-        <i class="nav-icon fa fa-truck"></i>
-        <p>Proveedores</p>
+    <a href="{{ url('programas') }}" class="nav-link {{ Request::is('programas*') ? 'active' : '' }}">
+        <i class="nav-icon fa fa-tv"></i>
+        <p>Programas</p>
     </a>
 </li>
 
 <li class="nav-item">
-    <a href="{{url('articulos')}}" class="nav-link">
-        <i class="nav-icon fa fa-cube"></i>
-        <p>Artículos</p>
+    <a href="{{ url('comunidades') }}" class="nav-link {{ Request::is('comunidades*') ? 'active' : '' }}">
+        <i class="nav-icon fa fa-people-arrows"></i>
+        <p>Comunidades</p>
     </a>
 </li>
 
 <li class="nav-item">
-    <a href="{{url('clientes')}}" class="nav-link">
+    <a href="{{ url('preguntas') }}"
+        class="nav-link {{ Request::is('preguntas*') ? 'active' : '' }} {{ Request::is('respuestas*') ? 'active' : '' }}">
+        <i class="nav-icon fa fa-question"></i>
+        <p>Preguntas / Respuestas</p>
+    </a>
+</li>
+
+<li class="nav-item">
+    <a href="{{ url('beneficiarios') }}" class="nav-link {{ Request::is('beneficiarios*') ? 'active' : '' }}">
         <i class="nav-icon fa fa-users"></i>
-        <p>Beneficiario</p>
+        <p>Beneficiarios</p>
     </a>
 </li>
 
 <li class="nav-item">
-    <a href="{{url('transacciones_salida')}}" class="nav-link">
-        <i class="nav-icon fa fa-cube"></i>
-        <p>Salida de Artículos</p>
+    <a href="{{ url('evaluacion-crear') }}" class="nav-link {{ Request::is('evaluacion-crear') ? 'active' : '' }}">
+        <i class="nav-icon fa fa-chalkboard-teacher"></i>
+        <p>Crear Evaluación</p>
     </a>
 </li>
 
 <li class="nav-item">
-    <a href="{{url('reporte_mas_vendidos')}}" class="nav-link">
-        <i class="nav-icon fa fa-cube"></i>
-        <p>Reporte Artículos Vendidos</p>
+    <a href="{{ url('evaluaciones') }}" class="nav-link {{ Request::is('evaluaciones*') ? 'active' : '' }}">
+        <i class="nav-icon fa fa-list-alt"></i>
+        <p>Evaluaciones Realizadas</p>
     </a>
+</li>
+
+<li class="nav-item">
+    <a href="{{ url('usuarios') }}" class="nav-link {{ Request::is('usuarios*') ? 'active' : '' }}">
+        <i class="nav-icon fa fa-user-circle"></i>
+        <p>Usuarios Sistema</p>
+    </a>
+</li>
+
+<li class="nav-item">
+    <a href="#" class="nav-link {{ Request::is('reportes*') ? 'active' : '' }}">
+        <i class="nav-icon fas fa-cube"></i>
+        <p>
+            Reportes
+            <i class="fas fa-angle-left right"></i>
+        </p>
+    </a>
+    <ul class="nav nav-treeview">
+        <li class="nav-item">
+            <a href="{{ url('reportes/alertas') }}" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Alertas Críticas</p>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="{{ url('reportes/tecnicos') }}" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Evaluaciones Técnicos</p>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="{{ url('reportes/indicadores') }}" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Indicadores</p>
+            </a>    
+        </li>
+        <li class="nav-item">
+            <a href="{{ url('reportes/dimensiones') }}" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Dimensiones</p>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="{{ url('reportes/comunidades') }}" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Comunidades</p>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="{{ url('reportes/beneficiario') }}" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Beneficiario</p>
+            </a>
+        </li>
+    </ul>
 </li>
 
 <li class=" nav-item">
-    <a class="nav-link" href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">
+    <a class="nav-link" href="{{ route('logout') }}"
+        onclick="event.preventDefault();document.getElementById('logout-form').submit();">
         <p>
             <i class="nav-icon fa fa-power-off"></i><span class="menu-title text-truncate">Cerrar Sesión</span>
         </p>

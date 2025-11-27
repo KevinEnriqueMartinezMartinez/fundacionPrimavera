@@ -270,16 +270,16 @@
         </div>
       </form>
       
-      <div class="text-center mt-4">
+      {{-- <div class="text-center mt-4">
         <a href="#" style="color: #3498db; text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: all 0.3s ease;">
           <i class="fas fa-key mr-1"></i> ¿Olvidó su contraseña?
         </a>
-      </div>
+      </div> --}}
       
     </div>
     <div class="card-footer text-center py-3" style="background: rgba(0,0,0,0.1); border-top: 1px solid rgba(255,255,255,0.1);">
       <small style="color: rgba(255,255,255,0.7);">
-        <i class="far fa-copyright mr-1"></i> {{ date('Y') }} Fundación Primavera - Todos los derechos reservados
+        <i class="far fa-copyright mr-1"></i> {{ date('Y') }} Fundación Primavera - &copy; {{date('Y')}}
       </small>
     </div>
 </div>
