@@ -60,7 +60,19 @@
       <!-- Sidebar Menu -->
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-          @include('components.menu')
+          @switch(Auth::user()->idRol)
+              @case(1)
+                  @include('components.admin')
+              @break
+              @case(2)
+                  @include('components.tecnico')
+              @break
+              @case(3)
+                  @include('components.visor')
+              @break
+              @default
+                  
+          @endswitch
         </ul>
       </nav>
       <!-- /.sidebar-menu -->
