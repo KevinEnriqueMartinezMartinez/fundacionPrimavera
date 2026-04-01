@@ -55,7 +55,7 @@
                                 @foreach ($preguntas as $pregunta)
                                     <tr>
                                         <td>{{ $pregunta->pregunta }}</td>
-                                        <td>{{ $pregunta->indicador->nombre }}</td>
+                                        {{-- <td>{{ $pregunta->indicador->nombre }}</td> --}}
                                         <td>{{ $pregunta->indicador->dimension->dimension }}</td>
                                         <td>
                                             <a href="{{ url('respuestas/p/' . $pregunta->id) }}"

@@ -22,10 +22,12 @@ class BeneficiariosController extends Controller
 
     public function store(Request $request){
         try {
+
+        //dd($request->all());
             Beneficiario::create($request->all());
             return redirect()->route('beneficiarios.index')->with('success', 'Beneficiario creado correctamente');
         } catch (\Exception $e) {
-            return redirect()->back()->with('error', 'Algo salió mal, intenta de nuevo.');
+            return redirect()->back()->with('error', $e->getMessage());
         }
     }
 
